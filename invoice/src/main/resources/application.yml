@@ -1,0 +1,23 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: invoice
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: invoice
+
+  activemq:
+    broker-url: tcp://localhost:61616
+    password: admin
+    user: admin
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+    fetch-registry: true
